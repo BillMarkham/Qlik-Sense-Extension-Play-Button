@@ -47,13 +47,9 @@ This extensions will select the specified field values one by one in a given tim
  
 # Examples
  
-![Play](https://user-images.githubusercontent.com/18327523/33879680-30c473ce-df55-11e7-8b91-86b27fd19bf0.png)
+![Play](https://user-images.githubusercontent.com/18327523/33879680-30c473ce-df55-11e7-8b91-86b27fd19bf0.png)      ![Pause](https://user-images.githubusercontent.com/18327523/33879715-4b289470-df55-11e7-8eea-466a90f044b4.png)
 
-![Pause](https://user-images.githubusercontent.com/18327523/33879715-4b289470-df55-11e7-8eea-466a90f044b4.png)
-
-![Stop](https://user-images.githubusercontent.com/18327523/33879733-5ab1c52e-df55-11e7-92bf-7d651eecb987.png)
-
-![icon-resume](https://user-images.githubusercontent.com/18327523/33881898-498bd274-df5c-11e7-8e0b-ad15890349cf.png)
+![Stop](https://user-images.githubusercontent.com/18327523/33879733-5ab1c52e-df55-11e7-92bf-7d651eecb987.png)      ![icon-resume](https://user-images.githubusercontent.com/18327523/33881898-498bd274-df5c-11e7-8e0b-ad15890349cf.png)
 	
 # Author
 
