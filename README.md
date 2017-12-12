@@ -24,7 +24,7 @@ This extensions will select the field values one by one in a particular time per
 
 1. Install the latest version of Qlik Sense Desktop in your machine (http://www.qlik.com/try-or-buy/download-qlik-sense).
 
-2. Download Flip-Switch-Extension and extract the zip file into the following location "C:\Users\%USERNAME%\Documents\Qlik\Sense\Extensions\"
+2. Download Play-Button-Extension and extract the zip file into the following location "C:\Users\%USERNAME%\Documents\Qlik\Sense\Extensions\"
 
 *See instructions 
 [How to import an extension on Qlik Sense Server]
@@ -34,18 +34,18 @@ This extensions will select the field values one by one in a particular time per
 
 1. Drag and drop the visualization extension into a Qlik Sense sheet and define variable name
 
-2. Label Text
+2. Field Name
 
-	Customized text can be created by the user. For example
+	Field name can be entered by the user. For example
 
-![label text](https://cloud.githubusercontent.com/assets/18327523/14352186/e027f5c8-fcf0-11e5-9c7f-5390bc543c5a.png) 
+![fieldname](https://user-images.githubusercontent.com/18327523/33880302-3d319496-df57-11e7-92bc-d74cff018c25.png) 
 
-3.Variable
+3.Time Period
 
 - Usually you have to create the variable in your data load script.But in this Flip switch extension you can create a variable by entering the text into the "variable Name" textbox.  
 	
 
- ![variable](https://cloud.githubusercontent.com/assets/18327523/14352187/e02f9378-fcf0-11e5-8fe5-05962bcfecd6.png)
+ ![timeperiod](https://user-images.githubusercontent.com/18327523/33880332-50a24fd4-df57-11e7-808c-f59140c0706e.png)
  
 4.Variable values can be set to true or false
 	
