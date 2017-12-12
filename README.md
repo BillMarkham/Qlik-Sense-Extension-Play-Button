@@ -47,7 +47,7 @@ This extension will automatically select the specified field values one by one i
  
 # Example
  
- ![example](https://user-images.githubusercontent.com/18327523/33887617-5637cec4-df70-11e7-9659-923010379f90.gif)
+ ![example](https://user-images.githubusercontent.com/18327523/33889204-680bc29a-df75-11e7-9565-bcbd99b9b6e0.gif)
 	
 # Author
 
