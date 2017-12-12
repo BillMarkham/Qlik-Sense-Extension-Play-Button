@@ -40,7 +40,7 @@ This extension will automatically select the specified field values one by one i
 
 3. Time Period
 
-  - Specify the time period so that the extension will run based on the given intervals.
+  	Specify the time period so that the extension will run based on the given intervals.
 	
      ![timeperiod](https://user-images.githubusercontent.com/18327523/33880332-50a24fd4-df57-11e7-808c-f59140c0706e.png)
 
