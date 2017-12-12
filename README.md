@@ -1,6 +1,6 @@
 # Play Button
 
-This extensions will select the specified field values one by one in a given time period.
+This extension will automatically select the specified field values one by one in a given time period.
 
 ## Table of Contents
 * [Screenshot](#screenshot)
@@ -47,7 +47,7 @@ This extensions will select the specified field values one by one in a given tim
  
 # Examples
  
- ![icons](https://user-images.githubusercontent.com/18327523/33883526-25cb48a0-df62-11e7-8185-d5178d119a70.png)
+ ![example](https://user-images.githubusercontent.com/18327523/33887617-5637cec4-df70-11e7-9659-923010379f90.gif)
 	
 # Author
 
