@@ -45,7 +45,7 @@ This extension will automatically select the specified field values one by one i
      ![timeperiod](https://user-images.githubusercontent.com/18327523/33880332-50a24fd4-df57-11e7-808c-f59140c0706e.png)
 
  
-# Examples
+# Example
  
  ![example](https://user-images.githubusercontent.com/18327523/33887617-5637cec4-df70-11e7-9659-923010379f90.gif)
 	
