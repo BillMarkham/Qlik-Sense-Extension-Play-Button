@@ -11,7 +11,7 @@ This extension will automatically select the specified field values one by one i
 
 
 
-#Screenshot
+# Screenshot
 
 ![icon](https://user-images.githubusercontent.com/18327523/33881766-d80fbf3e-df5b-11e7-9549-c3cd37120854.png)
 
@@ -28,7 +28,7 @@ This extension will automatically select the specified field values one by one i
 [How to import an extension on Qlik Sense Server]
 (http://help.qlik.com/sense/en-US/online/#../Subsystems/Qlik_Management_Console_help/Content/QMC_Resources_Extensions_AddingExtensions.htm?Highlight=extension)
 
-#Usage
+# Usage
 
 1. Drag and drop the visualization extension into a Qlik Sense sheet and define variable name
 
