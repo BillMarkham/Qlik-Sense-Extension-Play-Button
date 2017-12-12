@@ -15,6 +15,8 @@ This extensions will select the field values one by one in a particular time per
 
 ![icon](https://user-images.githubusercontent.com/18327523/33881766-d80fbf3e-df5b-11e7-9549-c3cd37120854.png)
 
+![properties](https://user-images.githubusercontent.com/18327523/33881855-2a918da0-df5c-11e7-9cce-25e51c716e8d.png)
+
 
 # Installation
 
@@ -34,13 +36,13 @@ This extensions will select the field values one by one in a particular time per
 
 	Enter the field name that needs to be displayed. For example
 
- ![fieldname](https://user-images.githubusercontent.com/18327523/33880302-3d319496-df57-11e7-92bc-d74cff018c25.png) 
+   ![fieldname](https://user-images.githubusercontent.com/18327523/33880302-3d319496-df57-11e7-92bc-d74cff018c25.png) 
 
-3.Time Period
+3. Time Period
 
-- Specify the time period so that the extension will run based on the given intervals.
+  - Specify the time period so that the extension will run based on the given intervals.
 	
- ![timeperiod](https://user-images.githubusercontent.com/18327523/33880332-50a24fd4-df57-11e7-808c-f59140c0706e.png)
+   ![timeperiod](https://user-images.githubusercontent.com/18327523/33880332-50a24fd4-df57-11e7-808c-f59140c0706e.png)
 
  
 # Examples
@@ -50,6 +52,8 @@ This extensions will select the field values one by one in a particular time per
 ![Pause](https://user-images.githubusercontent.com/18327523/33879715-4b289470-df55-11e7-8eea-466a90f044b4.png)
 
 ![Stop](https://user-images.githubusercontent.com/18327523/33879733-5ab1c52e-df55-11e7-92bf-7d651eecb987.png)
+
+![icon-resume](https://user-images.githubusercontent.com/18327523/33881898-498bd274-df5c-11e7-8e0b-ad15890349cf.png)
 	
 # Author
 
