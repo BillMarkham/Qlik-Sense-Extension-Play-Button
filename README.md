@@ -15,7 +15,7 @@ This extensions will select the field values one by one in a particular time per
 
 ![icon](https://user-images.githubusercontent.com/18327523/33881766-d80fbf3e-df5b-11e7-9549-c3cd37120854.png)
 
-![properties](https://user-images.githubusercontent.com/18327523/33881855-2a918da0-df5c-11e7-9cce-25e51c716e8d.png)
+ ![properties](https://user-images.githubusercontent.com/18327523/33881855-2a918da0-df5c-11e7-9cce-25e51c716e8d.png)
 
 
 # Installation
@@ -42,7 +42,7 @@ This extensions will select the field values one by one in a particular time per
 
   - Specify the time period so that the extension will run based on the given intervals.
 	
-   ![timeperiod](https://user-images.githubusercontent.com/18327523/33880332-50a24fd4-df57-11e7-808c-f59140c0706e.png)
+     ![timeperiod](https://user-images.githubusercontent.com/18327523/33880332-50a24fd4-df57-11e7-808c-f59140c0706e.png)
 
  
 # Examples
