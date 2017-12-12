@@ -13,11 +13,7 @@ This extensions will select the field values one by one in a particular time per
 
 #Screenshot
 
-![Play](https://user-images.githubusercontent.com/18327523/33879680-30c473ce-df55-11e7-8b91-86b27fd19bf0.png)
-
-![Pause](https://user-images.githubusercontent.com/18327523/33879715-4b289470-df55-11e7-8eea-466a90f044b4.png)
-
-![Stop](https://user-images.githubusercontent.com/18327523/33879733-5ab1c52e-df55-11e7-92bf-7d651eecb987.png)
+![icon](https://user-images.githubusercontent.com/18327523/33881766-d80fbf3e-df5b-11e7-9549-c3cd37120854.png)
 
 
 # Installation
@@ -36,26 +32,24 @@ This extensions will select the field values one by one in a particular time per
 
 2. Field Name
 
-	Field name can be entered by the user. For example
+	Enter the field name that needs to be displayed. For example
 
-![fieldname](https://user-images.githubusercontent.com/18327523/33880302-3d319496-df57-11e7-92bc-d74cff018c25.png) 
+ ![fieldname](https://user-images.githubusercontent.com/18327523/33880302-3d319496-df57-11e7-92bc-d74cff018c25.png) 
 
 3.Time Period
 
-- Usually you have to create the variable in your data load script.But in this Flip switch extension you can create a variable by entering the text into the "variable Name" textbox.  
+- Specify the time period so that the extension will run based on the given intervals.
 	
-
  ![timeperiod](https://user-images.githubusercontent.com/18327523/33880332-50a24fd4-df57-11e7-808c-f59140c0706e.png)
- 
-4.Variable values can be set to true or false
-	
-	If True or Checked - Color changes to Green
 
-	If False or UnChecked - Color changes to White
  
 # Examples
  
-![examples](https://cloud.githubusercontent.com/assets/18327523/14352200/f35986c0-fcf0-11e5-93d2-7772e06c015e.png)
+![Play](https://user-images.githubusercontent.com/18327523/33879680-30c473ce-df55-11e7-8b91-86b27fd19bf0.png)
+
+![Pause](https://user-images.githubusercontent.com/18327523/33879715-4b289470-df55-11e7-8eea-466a90f044b4.png)
+
+![Stop](https://user-images.githubusercontent.com/18327523/33879733-5ab1c52e-df55-11e7-92bf-7d651eecb987.png)
 	
 # Author
 
