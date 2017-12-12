@@ -1,6 +1,6 @@
 # Play Button
 
-This extensions will select the field values one by one in a particular time period.
+This extensions will select the specified field values one by one in a given time period.
 
 ## Table of Contents
 * [Screenshot](#screenshot)
