@@ -1,11 +1,8 @@
 define(["jquery", "qlik"],
-//define(["jquery", "./simpletable.css"],
 
 function ($, qlik) {
-
-	/* 'use strict';
-	$("<style>").html(qlik).appendTo("head"); */
-	
+	var bill = 0 ;
+	var firstPaint = true ;
 	var app;
 	app = qlik.currApp(this);
 	var doc;
@@ -24,42 +21,62 @@ function ($, qlik) {
 	temp_TimeOut=0;	
 	var color_Code="#EC865D";
 	var timeOutFunction;
+	var homeSheetId = qlik.navigation.getCurrentSheetId().sheetId ;
     return {
         definition: {
             type: "items",
             component: "accordion",
             items: {
+				dimensions: {
+					uses: "dimensions",
+					label: "Cycle Field" ,
+					min: 1,
+					max: 1
+				},
+				autoplay: {
+					type: "items" ,
+					label: "Auto Play",
+					items: {
+						name: {
+							ref: "var_Time_Period",
+							label: "Time Period in Sec",
+							type: "string",
+							defaultValue: "1"
+						} ,
+						continuous: {
+							ref: "var_Continuous",
+							label: "Continuous Play",
+							type: "boolean",
+							defaultValue: "false"
+						}
+					}
+				},
+				
                  settings: {
                     uses: "settings",					
-                    items:
-					{
-								    id1_Name: {
-								        ref: "var_Field_Name",
-								        label: "Field Name",
-								        type: "string",
-								        defaultValue: ""
-								    },
-									id2_Name: {
-								        ref: "var_Time_Period",
-								        label: "Time Period in Sec",
-								        type: "string",
-								        defaultValue: "1"
-								    }
-					}
-                }
+                 }
 
             }
         },
+		support: {
+			snapshot: false,
+			export: false,
+			exportData: false
+		},
         paint: function ($element, layout) {
 
-            temp_FieldName = layout.var_Field_Name;
-            //fileName = layout.var_File_Name;
-            temp1_FieldName = app.field(temp_FieldName);
-            temp1_FieldName.getData();
+			var cycleDim = layout.qHyperCube.qDimensionInfo[0].qGroupFieldDefs[0] ;		
+			var vContinuous =layout.var_Continuous ;			
 			
-			var spanText="Select one by one from ";
-			if(layout.var_Field_Name.length > 0)
-				spanText="Select one by one from  '"+temp_FieldName+"'";
+			bill++ ;
+		
+            temp_FieldName = cycleDim ;
+            temp1_FieldName = app.field(temp_FieldName);
+		
+			if ( firstPaint ) {
+				temp1_FieldName.getData();
+				firstPaint = false ;
+			}
 
 			id_PlayImage_Value=layout.qInfo.qId + "_my_Playimage_automate";
 			id_StopImage_Value=layout.qInfo.qId + "_my_Stopimage_automate";
@@ -69,7 +86,7 @@ function ($, qlik) {
 			
 			span_id_Value=layout.qInfo.qId + "_my_span_automate";
 			tbl_id==layout.qInfo.qId + "_automate_tbl_ID";
-			
+		
             var html =		"<table id='"+tbl_id+"' style='margin-left:10px;'>"+
 								"<tr>"+
 									"<td align='justify'>"+										
@@ -89,33 +106,20 @@ function ($, qlik) {
 									"</td>"+
 								"</tr>"+
 							"</table>";
-					
-			
-			
 
             var container = $("#qv-toolbar-container").html();
 			
-			
-            $element.html(html);
-         
-			
-
-            
-			
-			
+            $element.html(html);		
 			
             $("#"+id_PlayImage_Value).click(
 				function (event) {
 						
 					  var x;
-						//if (confirm("\nAre you want to continue the printing process by '"+temp_FieldName+"' field ?\n\n") == true) {   opacity: 0.5;
-							
-								//alert(value);
 							
 								temp1_FieldName.rows.forEach(function (value) {
 									j = j + 1;
 								});
-								//alert(j +" > "+"1");
+
 								if (j < 1) {
 									alert("Given field name does not exists in this application.");
 								}								
@@ -144,26 +148,36 @@ function ($, qlik) {
 									temp1_FieldName.rows.forEach(function (value) {
 										field_Values.push(value.qText);
 									});
-									field_Values.push("");
-																		
-									start_Process();									
+								
+									start_Process();								
 								}
 						//} 
 				} // inbuild function
 			); // click event
 			function start_Process() {
+				var sheetid = qlik.navigation.getCurrentSheetId().sheetId ;
 
 				app.field(temp_FieldName).clear();
                 app.field(temp_FieldName).selectMatch(field_Values[i], true);
-			
 				
                 if (++i == field_Values.length) {
+					if ( vContinuous == true ) {
+							i = 0 ;
+						} else {
+							app.doSave();
+							stopSelection();
+							return;
+						}
+				}
+				
+				if ( sheetid !== homeSheetId ) {
+					clearTimeout(timeOutFunction);
+					app.field(temp_FieldName).clear();
 					app.doSave();
-					stopSelection();
-                    return;
-                }
+					return;
+				}	
+				
 				var time=layout.var_Time_Period*1000;
-				//alert(i+" ---> "+ field_Values[i] +" ---> "+time);
 				
                 timeOutFunction=window.setTimeout(start_Process, time);
 				
@@ -219,19 +233,17 @@ function ($, qlik) {
 								document.getElementById(id_StopImage_Value).style.cursor = 'pointer';
 								document.getElementById(id_StopImage_Value).disabled=false;
 								
+								
 								start_Process();
 						
 				} // inbuild function
 			); // click event
 			$("#"+id_StopImage_Value).click(
 				function (event) {
-						
-						
-					  var x;
-						//if (confirm("\nAre you sure, You want to stop the selection process?") == true) {
+					
+					var x;
 							
-								stopSelection();
-						//} 
+					stopSelection();
 				} // inbuild function
 			); // click event
 			function stopSelection()
@@ -259,7 +271,6 @@ function ($, qlik) {
 								 i = 0;
 								 j = 0;
 								temp_TimeOut=0;
-								//app.doSave();
 								clearTimeout(timeOutFunction);
 								app.field(temp_FieldName).clear();
 								app.doSave();
